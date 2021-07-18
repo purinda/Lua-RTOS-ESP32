@@ -1,0 +1,11 @@
+version: "2"
+services:
+  lua:
+    image: lua-rtos:latest
+    build: 
+      context: docker
+      dockerfile: Dockerfile
+    volumes:
+      - ./:./lua-rtos-src
+    devices:
+      - "/dev/ttyUSB5:/dev/ttyUSB0"
